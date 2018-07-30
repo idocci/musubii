@@ -40,6 +40,14 @@ module.exports = {
       apiKey: 'dbc9f9b21868cf3495822c37a89482b8',
       indexName: 'musubii'
     },
+    serviceWorker: {
+      updatePopup: true // Boolean | Object, default to undefined.
+      // If set to true, the default text config will be:
+      // updatePopup: {
+      //    message: "New content is available.",
+      //    buttonText: "Refresh"
+      // }
+    },
     logo: '/img/logo-set-yoko-musubii.svg',
     nav: [
       {
