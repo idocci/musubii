@@ -1,5 +1,5 @@
 module.exports = {
-  base: '/musubii/',
+  base: '/',
   serviceWorker: true,
   ga: 'UA-40305123-17',
   locales: {
