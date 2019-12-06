@@ -24,13 +24,14 @@
     "url": "https://qranoko.jp"
   },
   "scripts": {
-    "dev": "start-storybook -p 6006 -s ./static",
-    "generate": "build-storybook -s ./static -o ./public",
+    "dev": "docz dev",
+    "generate": "docz build --dest ./public",
+    "serve": "docz build --dest ./public && docz serve",
     "build": "yarn build:sass && yarn build:postcss && yarn build:cleancss",
     "build:sass": "node-sass ./src/scss -o ./dist --include-path ./node_modules --output-style expanded",
     "build:postcss": "postcss ./dist/musubii.css -d ./dist --no-map",
     "build:cleancss": "cleancss -o ./dist/musubii.min.css ./dist/musubii.css -d",
-    "clean": "rmtrash ./public"
+    "clean": "rmtrash ./public ./.docz"
   },
   "browserslist": [
     "> 3% in JP",
@@ -39,26 +40,18 @@
     "last 1 versions"
   ],
   "devDependencies": {
-    "@babel/core": "^7.7.4",
-    "@storybook/addon-knobs": "^5.2.8",
-    "@storybook/addon-notes": "^5.2.8",
-    "@storybook/addon-viewport": "^5.2.8",
-    "@storybook/react": "^5.2.8",
     "autoprefixer": "^9.7.3",
-    "babel-loader": "^8.0.6",
     "clean-css-cli": "^4.3.0",
-    "css-loader": "^3.2.1",
-    "file-loader": "^5.0.2",
+    "docz": "^2.1.1",
+    "gatsby-plugin-sass": "^2.1.24",
     "js-beautify": "^1.10.2",
     "node-sass": "^4.13.0",
     "postcss-cli": "^6.1.3",
-    "postcss-loader": "^3.0.0",
     "postcss-sort-media-queries": "^1.0.9",
+    "react": "^16.12.0",
     "react-copy-to-clipboard": "^5.0.2",
+    "react-dom": "^16.12.0",
     "react-markdown": "^4.2.2",
-    "react-syntax-highlighter": "^11.0.2",
-    "sass-loader": "^8.0.0",
-    "storybook-dark-mode": "^0.1.9",
-    "style-loader": "^1.0.1"
+    "react-syntax-highlighter": "^11.0.2"
   }
 }
