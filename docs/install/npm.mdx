@@ -1,6 +1,9 @@
-# Installation
+---
+name: npm
+menu: Install
+---
 
-## npm
+# npm
 
 MUSUBii のインストールは npm または Yarn で行います。
 
@@ -12,7 +15,7 @@ npm install musubii
 yarn add musubii
 ```
 
-### CSS Path
+## CSS Path
 
 CSS ファイルは `package.json` で main に設定されています。※CSS Variables は有効化できません
 
@@ -24,7 +27,7 @@ musubii/dist/musubii.css
 musubii/dist/musubii.min.css
 ```
 
-### SCSS Path
+## SCSS Path
 
 SCSS ファイルは、全体用のコンフィグとスタイルを分けて読み込めます。
 
@@ -42,7 +45,7 @@ musubii/src/scss/styles/_import.scss
 musubii/src/scss/musubii.scss
 ```
 
-### CLI Build
+## CLI Build
 
 npm scripts でビルドするには `node-sass` を利用します。
 
